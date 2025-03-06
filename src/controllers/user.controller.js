@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 // Validação de senha forte
 const isStrongPassword = (password) => {
   const regex =
-    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&.])[A-Za-z\d@$!%*#?&.]{8,}$/;
   return regex.test(password);
 };
 
