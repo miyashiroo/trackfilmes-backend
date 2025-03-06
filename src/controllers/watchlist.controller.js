@@ -162,7 +162,6 @@ exports.checkIfInWatchlist = async (req, res) => {
     });
   }
 };
-// src/controllers/watchlist.controller.js
 
 // Marcar filme como assistido ou não assistido
 exports.toggleWatched = async (req, res) => {
@@ -190,7 +189,7 @@ exports.toggleWatched = async (req, res) => {
 
     // Atualizar o status de assistido
     await watchlistItem.update({
-      watched: watched === true, // Garantir que seja booleano
+      watched: watched === true,
       watchedAt: watched === true ? new Date() : null,
     });
 
